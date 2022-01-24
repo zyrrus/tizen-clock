@@ -1,8 +1,6 @@
 "use strict";
 
-const e = React.createElement;
-
-class LikeButton extends React.Component {
+class Clock extends React.Component {
     constructor(props) {
         super(props);
         this.state = { liked: false };
@@ -13,13 +11,11 @@ class LikeButton extends React.Component {
             return "You liked this.";
         }
 
-        return e(
-            "button",
-            { onClick: () => this.setState({ liked: true }) },
-            "Like"
+        return (
+            <button onClick={() => this.setState({ liked: true })}>Like</button>
         );
     }
 }
 
-const domContainer = document.querySelector("#clock");
-ReactDOM.render(e(LikeButton), domContainer);
+let domContainer = document.querySelector("#clock");
+ReactDOM.render(<Clock />, domContainer);
