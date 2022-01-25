@@ -19055,18 +19055,13 @@
 
 	  const updateTime = () => setTime(now);
 
-	  const pad = (pad, str) => {
-	    if (typeof str === "undefined") return pad;
-	    return (str + pad).substring(0, pad.length);
-	  };
-
 	  const padText = date => {
 	    const arr = date.toLocaleString("en-US", {
 	      year: "numeric",
 	      month: "long",
 	      day: "numeric"
 	    }).split(",");
-	    return pad("            ", arr[0]) + arr[1];
+	    return arr[0].toString(0).padEnd(12, " ") + arr[1];
 	  };
 
 	  react.exports.useEffect(() => {
