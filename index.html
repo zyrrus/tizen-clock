@@ -6,10 +6,17 @@
             name="viewport"
             content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
         />
-        <meta name="description" content="Canvas Clock - Canvas API Tutorial" />
-        <script src="js/main.js"></script>
+        <meta name="description" content="Clock for Samsung TV" />
 
-        <title>Canvas Clock - Canvas API Tutorial</title>
+        <title>Clock</title>
+
+        <script>
+            window.process = {
+                env: {
+                    NODE_ENV: "development",
+                },
+            };
+        </script>
 
         <link rel="stylesheet" type="text/css" href="css/style.css" />
     </head>
@@ -18,17 +25,7 @@
         <h1>Clock App</h1>
         <div id="clock"></div>
 
-        <!-- Load React -->
-        <script
-            src="https://unpkg.com/react@17/umd/react.development.js"
-            crossorigin
-        ></script>
-        <script
-            src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
-            crossorigin
-        ></script>
-
         <!-- Load our React component. -->
-        <script src="js/Clock.js"></script>
+        <script src="js/build/Clock.js"></script>
     </body>
 </html>
