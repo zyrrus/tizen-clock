@@ -1,9 +1,19 @@
+$black: #1E1E1E;
+$dark-black: #0C0C0D;
+$beige: #D4BE98;
+$red: #EA6962;
+$lime: #B5BF6B;
+$yellow: #D8A657;
+$blue: #7DAEA3;
+$pink: #D98BA7;
+$green: #89B482;
+
 body {
     height: 100vh;
     overflow: hidden;
     margin: 0;
     padding: 0;
-    background-color: #0c0c0d;
+    background-color: $dark-black;
     font-size: 4rem;
     line-height: 1.05em;
 }
@@ -16,22 +26,11 @@ body {
 
 .clock-container {
     margin: auto;
-    width: -webkit-min-content;
-    width: -moz-min-content;
     width: min-content;
     height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
     align-items: flex-start;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
 }
 
@@ -47,16 +46,14 @@ body {
 }
 
 .gruvbox {
-    width: -webkit-max-content;
-    width: -moz-max-content;
     width: max-content;
-}
 
-.gruvbox [data-kind="digit"] {
-    background-color: #1e1e1e;
-    color: #d4be98;
-    border-radius: 2px;
-    margin-right: 0.1em;
+    [data-kind="digit"] {
+        background-color: $black;
+        color: #D4BE98;
+        border-radius: 2px;
+        margin-right: 0.1em;
+    }
 }
 
 .dimmer {
@@ -68,4 +65,3 @@ body {
     background-color: rgba(0, 0, 0, 0.8);
     z-index: 100;
 }
-/*# sourceMappingURL=style.css.map */
