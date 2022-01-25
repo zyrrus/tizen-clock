@@ -4,22 +4,29 @@ import { FlapDisplay, Presets } from "react-split-flap-effect";
 import "react-split-flap-effect/extras/themes.css";
 
 function Dimmer() {
-    const [isOn, setIsOn] = useState(false);
+    const [opacity, setOpacity] = useState("0");
 
-    const toggleIsOn = () => {
-        setIsOn(!isOn);
-        console.log("Dimmer isOn:", isOn);
+    const toggleOpacity = () => {
+        const newOpacity = opacity === "0" ? "1" : "0";
+        setOpacity(newOpacity);
     };
 
-    const handleKeyDown = (e) => {
-        if (e.keycode == 13) toggleIsOn();
-    };
+    useEffect(() => {
+        const onKey = (e) => {
+            if (e.key === "Enter") toggleOpacity();
+        };
+        window.addEventListener("keydown", onKey, false);
+
+        return () => {
+            window.addEventListener("keydown", onKey, false);
+        };
+    }, []);
 
     return (
         <div
-            onKeyDown={handleKeyDown}
             className='dimmer'
-            style={{ opacity: isOn ? "1" : "0" }}
+            style={{ opacity: opacity }}
+            onClick={toggleOpacity}
         />
     );
 }
@@ -92,5 +99,5 @@ function App() {
     );
 }
 
-let domContainer = document.querySelector("#clock");
+let domContainer = document.getElementById("clock");
 ReactDOM.render(<App />, domContainer);

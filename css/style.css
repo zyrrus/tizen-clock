@@ -1,71 +1,71 @@
 body {
-    height: 100vh;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-    background-color: #0c0c0d;
-    font-size: 4rem;
-    line-height: 1.05em;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  background-color: #0C0C0D;
+  font-size: 4rem;
+  line-height: 1.05em;
 }
 
-#root {
-    position: relative;
-    width: 100%;
-    height: 100%;
+#clock {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 .clock-container {
-    margin: auto;
-    width: -webkit-min-content;
-    width: -moz-min-content;
-    width: min-content;
-    height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+  margin: auto;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .light-bottom [data-kind="digit"]::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: 50%;
-    background-color: #26262677;
-    z-index: 10;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 50%;
+  background-color: #26262677;
+  z-index: 10;
 }
 
 .gruvbox {
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 .gruvbox [data-kind="digit"] {
-    background-color: #1e1e1e;
-    color: #d4be98;
-    border-radius: 2px;
-    margin-right: 0.1em;
+  background-color: #1E1E1E;
+  color: #D4BE98;
+  border-radius: 2px;
+  margin-right: 0.1em;
 }
 
 .dimmer {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 100;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 100;
 }
 /*# sourceMappingURL=style.css.map */
